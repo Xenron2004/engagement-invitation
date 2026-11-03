@@ -1,7 +1,6 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Cormorant_Garamond, Cinzel, Great_Vibes } from 'next/font/google';
-import kislaySakshi from '@/components/assets/kislay_sakshi.png';
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
@@ -33,23 +32,14 @@ export const metadata: Metadata = {
       'You are cordially invited to the engagement of Dr. Kislay & Sakshi. Open your invitation to join the celebration.',
     images: [
       {
-      url: kislaySakshi.src,
-      width: kislaySakshi.width,
-      height: kislaySakshi.height,
-      alt: 'Kislay and Sakshi',
-    },
+        url: '/images/kislay_sakshi.png',
+        alt: 'Kislay and Sakshi',
+      },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    images: [
-      {
-      url: kislaySakshi.src,
-      width: kislaySakshi.width,
-      height: kislaySakshi.height,
-      alt: 'Kislay and Sakshi',
-    },
-    ],
+    images: ['/images/kislay_sakshi.png'],
   },
 };
 
