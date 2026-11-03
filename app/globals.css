@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 43% 96%;
+    --foreground: 340 30% 18%;
+    --card: 30 43% 97%;
+    --card-foreground: 340 30% 18%;
+    --popover: 30 43% 97%;
+    --popover-foreground: 340 30% 18%;
+    --primary: 340 45% 25%;
+    --primary-foreground: 30 60% 96%;
+    --secondary: 340 35% 90%;
+    --secondary-foreground: 340 45% 25%;
+    --muted: 30 25% 92%;
+    --muted-foreground: 340 15% 45%;
+    --accent: 25 55% 55%;
+    --accent-foreground: 340 45% 20%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 30 60% 96%;
+    --border: 30 35% 85%;
+    --input: 30 35% 85%;
+    --ring: 340 45% 35%;
+    --radius: 0.75rem;
+
+    /* Wedding palette */
+    --champagne: 40 55% 80%;
+    --champagne-dark: 38 50% 60%;
+    --blush: 350 60% 90%;
+    --blush-dark: 348 55% 78%;
+    --rose-gold: 18 55% 70%;
+    --rose-gold-dark: 14 50% 52%;
+    --ivory: 45 40% 96%;
+    --burgundy: 348 55% 22%;
+    --burgundy-light: 348 40% 38%;
+    --gold: 43 62% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-serif), serif;
+    font-size: 1.05rem;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer components {
+  .font-script {
+    font-family: var(--font-script), cursive;
+  }
+  .font-serif {
+    font-family: var(--font-serif), serif;
+  }
+  .font-display {
+    font-family: var(--font-display), serif;
+    letter-spacing: 0.02em;
+  }
+
+  .glass {
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(16px) saturate(140%);
+    -webkit-backdrop-filter: blur(16px) saturate(140%);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 32px rgba(120, 40, 60, 0.12);
+  }
+  .glass-dark {
+    background: rgba(60, 12, 28, 0.35);
+    backdrop-filter: blur(16px) saturate(140%);
+    -webkit-backdrop-filter: blur(16px) saturate(140%);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  }
+
+  .text-gold-gradient {
+    background: linear-gradient(135deg, hsl(43 70% 60%) 0%, hsl(18 55% 70%) 50%, hsl(43 70% 60%) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .text-burgundy-gradient {
+    background: linear-gradient(135deg, hsl(348 55% 28%) 0%, hsl(348 40% 42%) 50%, hsl(348 55% 28%) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .gold-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(43 62% 55% / 0.7), transparent);
+  }
+  .gold-border {
+    border: 1px solid hsl(43 62% 55% / 0.5);
+  }
+
+  .btn-luxe {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, hsl(348 55% 25%), hsl(348 45% 35%));
+    color: hsl(40 60% 95%);
+    border: 1px solid hsl(43 62% 55% / 0.6);
+    box-shadow: 0 4px 20px rgba(120, 40, 60, 0.25), inset 0 1px 0 rgba(255,255,255,0.15);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .btn-luxe:hover {
+    box-shadow: 0 6px 30px rgba(120, 40, 60, 0.4), inset 0 1px 0 rgba(255,255,255,0.25);
+    transform: translateY(-2px);
+  }
+  .btn-luxe::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(110deg, transparent 30%, rgba(255,255,255,0.25) 50%, transparent 70%);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+  }
+  .btn-luxe:hover::before {
+    transform: translateX(100%);
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  .backface-hidden {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: hsl(348 55% 30% / 0.25);
+  color: hsl(348 55% 20%);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(30 43% 94%);
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(348 40% 50% / 0.4);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(348 40% 50% / 0.6);
+}
