@@ -1,6 +1,7 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Cormorant_Garamond, Cinzel, Great_Vibes } from 'next/font/google';
+import kislaySakshi from '@/components/assets/kislay_sakshi.png';
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
@@ -27,21 +28,27 @@ export const metadata: Metadata = {
   description:
     'With the blessings of our families, we invite you to celebrate the engagement of Dr. Kislay & Sakshi. Join us on our special day.',
   openGraph: {
-    title: 'Dr. Kislay & Sakshi | Wedding Invitation',
+    title: 'Dr. Kislay & Sakshi | Engagement Invitation',
     description:
-      'You are cordially invited to the wedding of Dr. Kislay & Sakshi. Open your invitation to join the celebration.',
+      'You are cordially invited to the engagement of Dr. Kislay & Sakshi. Open your invitation to join the celebration.',
     images: [
       {
-        url: 'https://images.pexels.com/photos/30215067/pexels-photo-30215067.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
-      },
+      url: kislaySakshi.src,
+      width: kislaySakshi.width,
+      height: kislaySakshi.height,
+      alt: 'Kislay and Sakshi',
+    },
     ],
   },
   twitter: {
     card: 'summary_large_image',
     images: [
       {
-        url: 'https://images.pexels.com/photos/30215067/pexels-photo-30215067.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
-      },
+      url: kislaySakshi.src,
+      width: kislaySakshi.width,
+      height: kislaySakshi.height,
+      alt: 'Kislay and Sakshi',
+    },
     ],
   },
 };

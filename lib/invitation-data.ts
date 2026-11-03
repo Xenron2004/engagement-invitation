@@ -37,7 +37,7 @@ export const invitation = {
     firstName: 'Sakshi',
     name: 'Sakshi Kumari',
     fullName: 'Sakshi Kumari',
-    photo: '/images/sakshi-ghibli.png',
+    photo: '/images/sakshii_ghibli.png',
     parents: {
       father: 'Shriram Singh',
       mother: 'Vibha Singh',
